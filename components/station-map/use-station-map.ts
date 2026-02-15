@@ -18,13 +18,13 @@ const GERMANY_CENTER: L.LatLngExpression = [51.1657, 10.4515];
 const DEFAULT_ZOOM = 6;
 const MARKER_ZOOM = 14;
 
-interface StationsMapProps {
+export interface UseStationMapParams {
   stations: Station[];
   selectedStationId: number | null;
   onStationSelect: (station: Station) => void;
 }
 
-export function StationsMap({ stations, selectedStationId, onStationSelect }: StationsMapProps) {
+export function useStationMap({ stations, selectedStationId, onStationSelect }: UseStationMapParams) {
   const mapRef = useRef<L.Map | null>(null);
   const markersRef = useRef<Map<number, L.Marker>>(new Map());
 
@@ -70,6 +70,4 @@ export function StationsMap({ stations, selectedStationId, onStationSelect }: St
       if (marker) marker.openTooltip();
     }
   }, [selectedStationId, stations]);
-
-  return <div id="stations-map" className="h-full min-h-[400px] w-full rounded-lg border border-zinc-200 bg-zinc-50" />;
 }
