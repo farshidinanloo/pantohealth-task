@@ -30,11 +30,9 @@ Open [http://localhost:3000](http://localhost:3000).
 
 The app uses an internal API route at `/api/stations` that returns the list of German train stations (id, name, city, lat, lng).
 
-## Deployment (Vercel)
+## Demo (Vercel)
+[Link](https://pantohealth-task.vercel.app/).
 
-1. Push the repo to GitHub and import the project in [Vercel](https://vercel.com).
-2. Deploy. No extra environment variables are required for the built-in API.
-3. If you use an external API base URL, set `NEXT_PUBLIC_APP_URL` to your deployed URL so server-side fetches work.
 
 ## Project structure
 
