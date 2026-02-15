@@ -51,7 +51,7 @@ export function StationsList({ stations, selectedStationId, onStationClick, isLo
               <button
                 type="button"
                 onClick={() => onStationClick(station)}
-                className={`w-full rounded-lg px-3 py-2 text-left text-sm transition-colors ${
+                className={`w-full rounded-lg px-3 py-2 text-left text-sm transition-colors cursor-pointer ${
                   selectedStationId === station.id
                     ? "bg-amber-100 text-amber-900 ring-1 ring-amber-300"
                     : "text-zinc-800 hover:bg-zinc-100"
